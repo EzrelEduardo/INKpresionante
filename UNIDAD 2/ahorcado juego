@@ -1,0 +1,22 @@
+
+alert ("A jugar el juego de ahorcado");
+var palabra = prompt("Ingrese una palabra");
+var intentos = 0;
+var error = 5;
+var letras = palabra.length;
+for (var i = 0; i < palabra.length; i++) {
+  var letra = prompt("Ingrese una letra");
+  if (palabra[i] == letra) {
+    alert("Letra correcta, ingrese otra letra");
+    intentos = intentos + 1;
+  } else {
+    alert("Letra incorrecta, vuelva a intentarlo");
+    errores = error - 1;
+  }
+}
+if (intentos == letras) {
+  alert("ganaste");
+} else {
+  alert("Perdiste" + palabra);
+  console.log(palabra);
+}
